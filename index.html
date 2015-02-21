@@ -127,6 +127,33 @@ Technologies: Java, JS, JSON, Android</p>
 </li>
 </ul>
 
+<h3>
+<a id="project-1-1" class="anchor" href="#project-1-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Project 1</h3>
+
+<p>Task: Let document define kern pairs, including between characters in different fonts<br>
+Details: Groff should allow a document author to define new kern pairs, including ones between characters from different fonts. This functionality is available in Heirloom troff's .kernpair request.  </p>
+
+<h3>
+<a id="project-2-1" class="anchor" href="#project-2-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Project 2</h3>
+
+<p>Task: Provide a way to redefine an existing symbol in a specific font<br>
+Details: When searching for a symbol, groff first checks whether the symbol has been defined with the .char request. If not, it checks the current font. Only if it is not in the current font does groff check other user-defined symbols. Thus, while .char can override an existing symbol across all fonts, there is no way to override an existing symbol only in a specific font, because all other symbol rules are of lower precedence than checking the current font. The mailing list thread beginning with <a href="http://lists.gnu.org/archive/html/groff/2015-02/msg00029.html">http://lists.gnu.org/archive/html/groff/2015-02/msg00029.html</a> contains examples of situations where this lack of functionality makes performing certain tasks ponderous.  </p>
+
+<h3>
+<a id="project-3-1" class="anchor" href="#project-3-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Project 3</h3>
+
+<p>Task: Improve Unicode support  </p>
+
+<h3>
+<a id="project-4" class="anchor" href="#project-4" aria-hidden="true"><span class="octicon octicon-link"></span></a>Project 4</h3>
+
+<p>Task: Implement shrinkable space<br>
+Details: Perhaps the third entry in the list of the most important improvements to GNU troff: shrinkable space. I guess that this has to be implemented while adding support for TeX-like paragraph formatting  </p>
+
+<p>Project 5
+Task: Modernize Font Support<br>
+Details: Update to today's font world. What groff currently supports natively (PostScript Type 1) is out of date since 15 years. Heirloom troff has support for this. <a href="http://heirloom.sourceforge.net/doctools.html">http://heirloom.sourceforge.net/doctools.html</a>   </p>
+
 <h2>
 <a id="parliament-data-information-systems" class="anchor" href="#parliament-data-information-systems" aria-hidden="true"><span class="octicon octicon-link"></span></a>Parliament Data Information Systems</h2>
 
@@ -166,19 +193,19 @@ Technologies: JSON, HTML, Shell Script, Linux, API</p>
 </ul>
 
 <h3>
-<a id="project-1-1" class="anchor" href="#project-1-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Project 1</h3>
+<a id="project-1-2" class="anchor" href="#project-1-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Project 1</h3>
 
 <p>Task: Implement new commands for typical use. See the example file `CJKfntef.tex'<br>
 Technologies: Command Line, Internationalization, UTF8 Standardization, Linux, Latex</p>
 
 <h3>
-<a id="project-2-1" class="anchor" href="#project-2-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Project 2</h3>
+<a id="project-2-2" class="anchor" href="#project-2-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Project 2</h3>
 
 <p>Task: Implement support of Emacs version above 23<br>
 Technologies: Command Line, Internationalization, UTF8 Standardization, Linux, Latex</p>
 
 <h3>
-<a id="project-3-1" class="anchor" href="#project-3-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Project 3</h3>
+<a id="project-3-2" class="anchor" href="#project-3-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Project 3</h3>
 
 <p>Task: Implement support for Khmer and Vietnamese for UTF-8 encoding, making emacs<br>
 Technologies: Command Line, Internationalization, UTF8 Standardization, Linux, Latex</p>
