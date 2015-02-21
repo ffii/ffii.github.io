@@ -236,6 +236,75 @@ Technologies: Command Line, Internationalization, UTF8 Standardization, Linux, L
 </li>
 </ul>
 
+<h3>
+<a id="project-1-4" class="anchor" href="#project-1-4" aria-hidden="true"><span class="octicon octicon-link"></span></a>Project 1</h3>
+
+<p>Task: One Time Password Optimization<br>
+Details: The current One Time Password (OTP) implementation doesn't encrypt the secrets in the Crypto Stick. (Earlier it was planned to trigger the OTP with a dedicated button only). Now the firmware should be improved so that the secrets are encrypted with the embedded smart card. In addition, mechanisms to prevent the creation of large amounts of tokens should be prevented.The challenge-responds version of OTP called OCRA should be implemented.<br>
+To do:</p>
+
+<ul>
+<li>Integrate the smart card to encrypt and decrypt the OTP secrets </li>
+<li>Add throttling mechanisms</li>
+<li>Add OCRA feature to OTP</li>
+<li>Update the client tool to support OCRA, potentially create a FireFox addon for this purpose</li>
+<li>Test</li>
+</ul>
+
+<h3>
+<a id="project-2-4" class="anchor" href="#project-2-4" aria-hidden="true"><span class="octicon octicon-link"></span></a>Project 2</h3>
+
+<p>Task: Support for Google's U2F (FIDO Alliance) - Implement support for the FIDO Alliance's U2F token<br>
+Details:</p>
+
+<ul>
+<li>Get familiar with the U2F specification </li>
+<li>Draft an approach to integrate U2F to the Crypto Stick </li>
+<li>Implement U2F to the firmware </li>
+<li>Implement U2F support into the Crypto Stick Tool </li>
+<li>Test </li>
+</ul>
+
+<h3>
+<a id="project-3-3" class="anchor" href="#project-3-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Project 3</h3>
+
+<p>Task: L4-Based Secure eCash Server<br>
+Details: OpenCoin is a related open source project to build an anonymous digital cash system. L4 is a microkernel for secure embedded environments. This project is to implement a secure server for OpenCoin based on L4re. The server would perform the following activities: receive a token, verify its integrity, create a new token, sign it by calling a HSM, store the old token in an external DB, send back the new token.<br>
+To do:
+G* et familiar with the OpenCoin protocol and L4re. </p>
+
+<ul>
+<li>Agree the architecture with mentor </li>
+<li>Implement the external interfaces </li>
+<li>Implement JSON parsing and token structures etc. </li>
+<li>Implement SHA2 hashing and RSA signature validation, preferrable by utilizing existing libraries.</li>
+<li>Port and integrate existing PKCS#11 driver to L4re </li>
+<li>Documentation, testing</li>
+</ul>
+
+<h3>
+<a id="project-5-1" class="anchor" href="#project-5-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Project 5</h3>
+
+<p>Task: OpenPGP JavaCard<br>
+Details: Re-implement the OpenPGP Card specification on a JavaCard device. A project space has already been setup here but this implementation seems to be more mature. </p>
+
+<h3>
+<a id="project-6" class="anchor" href="#project-6" aria-hidden="true"><span class="octicon octicon-link"></span></a>Project 6</h3>
+
+<p>Task: Secure firmware update<br>
+Details: The purpose is to prevent (or make it more difficult) flashing of malicious firmware when an attacker has access to the device for a short time. Legitimate firmwares would be signed with a firmware signing key. Crypto Stick would be shipped with the public signing key. User downloads a signed firmware update for their device, and loads it onto the Crypto Stick. Crypto Stick verifies the signature, ensuring that the firmware is authentic. If it is, the firmware updates itself, otherwise it rejects it. The entire logic might be implemented in a separate boot loader either for the current STM32-based Crypto Stick 1.4 or for the new Crypto Stick 2 which is Atmel AT43UC-based.<br>
+To do:</p>
+
+<ul>
+<li>Get familiar with Crypto Stick's firmware.</li>
+<li>Decide for a bootloader to use</li>
+<li>Get the bootloader running</li>
+<li>Integrate hash- and RSA signature verification functions</li>
+<li>Implement load-firmware function</li>
+<li>If necessary: write client tool to send new firmware to Crypto Stick</li>
+<li>Test </li>
+</ul>
+
 <h1>
 <a id="about-ffii" class="anchor" href="#about-ffii" aria-hidden="true"><span class="octicon octicon-link"></span></a>About FFII</h1>
 
